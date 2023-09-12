@@ -4,9 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MSSQLStoreAPI.Models;
+using Microsoft.AspNetCore.Authorization;
+using MSSQLStoreAPI.Authentication;
 
 namespace MSSQLStoreAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")] //https://localhost5001/api/Category
     public class CategoryController : ControllerBase
